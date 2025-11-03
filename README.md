@@ -51,7 +51,7 @@ Version Control: Git and GitHub
 
 ## Architecture
 
-The project follows a four-layer architecture:
+#### The project follows a four-layer architecture:
 
 Controller  →  Service  →  DAO  →  Model
 (MainApp)      (Business Logic)   (Database Access)   (Data Classes)
@@ -70,7 +70,7 @@ Model: Represents entities such as User, Product, Cart, and Order
 
 ## Database Setup
 
-Run the following SQL commands in MySQL:
+#### Run the following SQL commands in MySQL:
 
 CREATE DATABASE ecommerce;
 USE ecommerce;
@@ -130,8 +130,8 @@ Order history for users
 
 ## Author
 
-### Barnas Munthaha A
-### GitHub: BarnasMunthaha
+##### Barnas Munthaha A
+##### GitHub: BarnasMunthaha
 
 
 ---
