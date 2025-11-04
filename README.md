@@ -21,7 +21,7 @@ User registration and login
 
 View product list
 
-Add and remove items from cart
+Add items to the cart
 
 View cart with total price
 
