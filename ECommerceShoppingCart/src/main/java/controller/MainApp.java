@@ -77,8 +77,10 @@ public class MainApp {
             System.out.println("\n1. View Products");
             System.out.println("2. Add to Cart");
             System.out.println("3. View Cart");
-            System.out.println("4. Checkout");
-            System.out.println("5. Logout");
+            System.out.println("4. Remove from Cart");
+            System.out.println("5. Clear Cart");
+            System.out.println("6. Checkout");
+            System.out.println("7. Logout");
             System.out.println("Enter Your Choice:");
 
             int choice = sc.nextInt();
@@ -94,9 +96,16 @@ public class MainApp {
                 	viewCart();
                 	break;
                 case 4 :
-                	checkout();
+                	removeFromCart();
                 	break;
                 case 5 :
+                	clearCart();
+                	break;
+                	
+                case 6 :
+                	checkout();
+                	break;
+                case 7 :
                 { loggedUser = null; 
                 System.out.println("Logged Out Successfully!");
                 return;}
@@ -137,6 +146,22 @@ public class MainApp {
                 System.out.println("CartID: " + c.getId() + " | ProductID: " + c.getProductId() + " | Qty: " + c.getQuantity());
             System.out.println("Total Amount: ₹" + total);
         }
+    }
+    static void removeFromCart() {
+        System.out.print("Enter Cart ID to remove: ");
+        int cartId = sc.nextInt();
+
+        if (cartService.removeFromCart(cartId))
+            System.out.println(" Product removed from cart!");
+        else
+            System.out.println(" Product not found in cart!");
+    }
+
+    static void clearCart() {
+        if (cartService.clearCart(loggedUser.getId()))
+            System.out.println(" Cart cleared successfully!");
+        else
+            System.out.println(" Cart is already empty!");
     }
 
     static void checkout() {
