@@ -32,11 +32,13 @@ public class CartService {
         return total;
     }
 
-    public boolean removeItem(int cartId) {
+    public boolean removeFromCart(int cartId) {
         return cartDAO.removeFromCart(cartId);
     }
 
     public boolean clearCart(int userId) {
         return cartDAO.clearCart(userId);
     }
+
+	
 }
